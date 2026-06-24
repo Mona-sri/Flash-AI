@@ -2,6 +2,7 @@
 
 FlashAI is a web application designed to help students and learners study more efficiently by automatically generating study flashcards from uploaded file or text using AI.
 
+FlashAI bridges the gap between dense academic notes and effective active recall. By leveraging AI, FlashAI automates the creation of interactive flashcards based on user-defined difficulty settings, allowing students to spend less time formatting and more time mastering concepts.
 ## 🚀 Tech Stack
 *   **Frontend:** React, CSS
 *   **Backend:** Node.js, Express.js, Mongoose
@@ -9,7 +10,7 @@ FlashAI is a web application designed to help students and learners study more e
 *   **AI Engine:** Gemini API
 
 ## ✨ Key Features
-*   **Smart Generation:** Paste your notes and instantly generate organized flashcards.
+*   **Smart Generation:** Paste your notes and instantly generate organized flashcards of requred difficulty level.
 *   **Study Mode:** Interactive interface to flip cards and track your progress.
 *   **Quiz Mode:** Interactive UI for browsing and quizzing yourself on generated content.
 *   **Dashboard:** Save, manage, and play quiz with the saved flashcard sets.
@@ -28,13 +29,13 @@ FlashAI is a web application designed to help students and learners study more e
 ```
 
 ### Backend Setup
-1. Navigate to your server folder: `cd server`
+1. Navigate to your server folder: `cd backend`
 2. Install dependencies: `npm install`
 3. Create a `.env` file and add your keys (see below).
 4. Start the server: `node server.js`
 
 ### Frontend Setup
-1. Navigate to your client folder: `cd client`
+1. Navigate to your client folder: `cd frontend`
 2. Install dependencies: `npm install`
 3. Start the app: `npm start`
 
