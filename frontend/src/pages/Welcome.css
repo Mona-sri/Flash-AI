@@ -1,0 +1,146 @@
+.welcome-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px 70px;
+  animation: fadeUp .6s ease both;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+.hero-title {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+.grad-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  padding: 15px 36px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-radius: var(--r-xl);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: var(--shadow-md);
+  transition: all var(--tr);
+}
+.btn-primary:hover        { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-primary.large        { padding: 17px 44px; font-size: 1.05rem; }
+.btn-outline {
+  padding: 15px 36px;
+  background: var(--surface);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: var(--r-xl);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--tr);
+}
+.btn-outline:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+/* ── Shared section titles ────────────────────────────── */
+.section-title {
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--ink);
+  margin-bottom: 36px;
+}
+
+/* ── How it works ────────────────────────────────────── */
+.how-section  { margin-bottom: 72px; }
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.step-card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  border: 2px solid var(--mist);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--tr), box-shadow var(--tr);
+}
+.step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.step-number {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+.step-card h3 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+.step-card p  { font-size: .875rem; color: var(--ink-soft); line-height: 1.6; }
+
+/* ── Features ────────────────────────────────────────── */
+.features-section { margin-bottom: 72px; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.feature-card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  border: 2px solid var(--mist);
+  box-shadow: var(--shadow-sm);
+  animation: fadeUp .5s ease both;
+  transition: transform var(--tr), box-shadow var(--tr);
+}
+.feature-card:nth-child(2) { animation-delay:.1s; }
+.feature-card:nth-child(3) { animation-delay:.2s; }
+.feature-card:nth-child(4) { animation-delay:.3s; }
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.feature-icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+.feature-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.feature-card p  { font-size: .875rem; color: var(--ink-soft); line-height: 1.6; }
+
+/* ── CTA strip ───────────────────────────────────────── */
+.cta-strip {
+  background: linear-gradient(135deg, var(--primary-light) 0%, #ffe9f3 100%);
+  border-radius: var(--r-xl);
+  padding: 60px 40px;
+  text-align: center;
+}
+.cta-strip h2 { font-family: var(--font-head); font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+.cta-strip p  { color: var(--ink-soft); margin-bottom: 28px; font-size: .95rem; }
