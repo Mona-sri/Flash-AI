@@ -25,6 +25,7 @@ FlashAI is a web application designed to help students and learners study more e
 1. Clone the repository:
 ```bash
    git clone [https://github.com/yourusername/FlashAI.git]
+```
 
 ### Backend Setup
 1. Navigate to your server folder: `cd server`
