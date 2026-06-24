@@ -1,0 +1,57 @@
+.fcl-wrapper { display: flex; flex-direction: column; gap: 20px; }
+
+/* Toggle bar */
+.view-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toggle-label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.toggle-btns {
+  display: flex;
+  gap: 6px;
+  background: var(--mist);
+  padding: 4px;
+  border-radius: var(--r-md);
+}
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: calc(var(--r-md) - 2px);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  transition: all var(--tr);
+}
+.toggle-btn:hover { color: var(--primary); }
+.toggle-btn.active {
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+/* Grid layout */
+.fcl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* List layout */
+.fcl-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.no-cards {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 40px;
+}

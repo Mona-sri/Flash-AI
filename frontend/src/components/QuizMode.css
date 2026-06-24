@@ -1,0 +1,126 @@
+.quiz-mode {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeUp .4s ease both;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quiz-exit {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 6px 0;
+  transition: color var(--tr);
+}
+.quiz-exit:hover { color: var(--primary); }
+
+.quiz-card {
+  background: var(--surface);
+  border-radius: var(--r-xl);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--mist);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 260px;
+}
+
+.quiz-question {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.opt-btn {
+  padding: 16px 20px;
+  background: var(--bg);
+  border: 2px solid var(--mist);
+  border-radius: var(--r-md);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.opt-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.opt-btn.correct {
+  background: var(--success) !important;
+  color: white !important;
+  border-color: var(--success) !important;
+}
+
+.opt-btn.wrong {
+  background: var(--danger) !important;
+  color: white !important;
+  border-color: var(--danger) !important;
+}
+
+.opt-btn.dim {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.btn-reveal {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--r-md);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.quiz-done {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  animation: fadeUp .4s ease both;
+}
+
+.btn-exit-done {
+  padding: 12px 32px;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--r-md);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
