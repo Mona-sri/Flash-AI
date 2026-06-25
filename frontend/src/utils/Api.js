@@ -1,5 +1,5 @@
 
-import { API_BASE } from './config';
+import { API_BASE } from '../config';
 const BACKEND_URL = `${API_BASE}/generate-flashcards`;
 /**
  * Generate flashcards from text via your backend.
