@@ -1,5 +1,6 @@
-const BACKEND_URL = 'http://localhost:5000/api/generate-flashcards';
 
+import { API_BASE } from './config';
+const BACKEND_URL = `${API_BASE}/generate-flashcards`;
 /**
  * Generate flashcards from text via your backend.
  * @param {string} text
