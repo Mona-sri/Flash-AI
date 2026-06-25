@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import QuizMode from '../components/QuizMode';
 import FlashcardList from '../components/FlashcardList';
 import './SavedDecks.css';
-import { API_BASE } from './config';
+import { API_BASE } from '../config';
 export default function SavedDecks() {
   const { savedDecks, deleteDeck } = useContext(AuthContext);
   const navigate = useNavigate();
