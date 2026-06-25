@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { API_BASE } from './config';
+import { API_BASE } from '../config';
 
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
