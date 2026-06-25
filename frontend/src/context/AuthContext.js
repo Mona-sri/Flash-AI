@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [savedDecks, setSavedDecks] = useState([]); 
   const signup = async (name, email, password) => {
-    const res = await fetch('${API_BASE}/auth/signup', {
+    const res = await fetch(`${API_BASE}/auth/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password })
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const res = await fetch('${API_BASE}/auth/login', {
+    const res = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }) => {
 
   const saveDeck = async (deck) => {
     try {
-      const res = await fetch('${API_BASE}/decks/save', {
+      const res = await fetch(`${API_BASE}/decks/save`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...deck, userId: user.id }) 
