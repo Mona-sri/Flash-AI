@@ -17,7 +17,7 @@ const upload = multer();
 // app.use(cors()); 
 // const cors = require('cors');
 app.use(cors({
-  origin: 'https://your-frontend-domain.onrender.com', 
+  origin: 'https://flash-ai-rryh.onrender.com', 
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' })); 
