@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import QuizMode from '../components/QuizMode';
 import FlashcardList from '../components/FlashcardList';
 import './SavedDecks.css';
-
+import { API_BASE } from './config';
 export default function SavedDecks() {
   const { savedDecks, deleteDeck } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function SavedDecks() {
   
   const handleDelete = async (id) => {
   try {
-    await fetch(`http://localhost:5000/api/decks/${id}`, { method: 'DELETE' });
+    await fetch(`${API_BASE}/decks/${id}`, { method: 'DELETE' });
     deleteDeck(id); 
     setDeleteConfirm(null);
     if (activeDeck?.id === id) closeMode();
