@@ -1,11 +1,12 @@
 import React, { createContext, useState } from 'react';
+import { API_BASE } from './config';
 
 export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [savedDecks, setSavedDecks] = useState([]); 
   const signup = async (name, email, password) => {
-    const res = await fetch('http://localhost:5000/api/auth/signup', {
+    const res = await fetch('${API_BASE}/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password })
@@ -18,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const res = await fetch('http://localhost:5000/api/auth/login', {
+    const res = await fetch('${API_BASE}/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -34,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   React.useEffect(() => {
     if (user && user.id) {
-      fetch(`http://localhost:5000/api/decks/${user.id}`)
+      fetch(`${API_BASE}/decks/${user.id}`)
         .then(res => res.json())
         .then(data => setSavedDecks(data))
         .catch(err => console.error("Failed to fetch decks", err));
@@ -43,7 +44,7 @@ export const AuthProvider = ({ children }) => {
 
   const saveDeck = async (deck) => {
     try {
-      const res = await fetch('http://localhost:5000/api/decks/save', {
+      const res = await fetch('${API_BASE}/decks/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...deck, userId: user.id }) 
@@ -60,7 +61,7 @@ export const AuthProvider = ({ children }) => {
   };
   const deleteDeck = async (id) => {
   try {
-    const res = await fetch(`http://localhost:5000/api/decks/${id}`, { 
+    const res = await fetch(`${API_BASE}/decks/${id}`, { 
       method: 'DELETE' 
     });
     if (res.ok) {
